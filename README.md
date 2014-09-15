@@ -116,10 +116,8 @@ This negatively affects both app and extension developers. It means that:
 
 * Extension developers should use the more complex (and unfortunately, not very thoroughly documented) [predicate syntax](https://developer.apple.com/library/prerelease/ios/documentation/General/Conceptual/ExtensibilityPG/ExtensionScenarios.html#//apple_ref/doc/uid/TP40014214-CH21-SW8) to specifically specify an OR relationship. This would look something like:
 
-<code>
-SUBQUERY(extensionItems, $extensionItem, SUBQUERY($extensionItem.attachments, $attachment, ANY $attachment.registeredTypeIdentifiers UTI-CONFORMS-TO "public.image").@count <= 10).@count >= 1 OR 
-SUBQUERY(extensionItems, $extensionItem, SUBQUERY($extensionItem.attachments, $attachment, ANY $attachment.registeredTypeIdentifiers UTI-CONFORMS-TO "public.text").@count >= 1).@count >= 1
-</code>
+<code>SUBQUERY(extensionItems, $extensionItem, SUBQUERY($extensionItem.attachments, $attachment, ANY $attachment.registeredTypeIdentifiers UTI-CONFORMS-TO "public.image").@count <= 10).@count >= 1 OR 
+SUBQUERY(extensionItems, $extensionItem, SUBQUERY($extensionItem.attachments, $attachment, ANY $attachment.registeredTypeIdentifiers UTI-CONFORMS-TO "public.text").@count >= 1).@count >= 1</code>
 
 ## Misc.
 
