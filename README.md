@@ -6,7 +6,7 @@ iOS app extensions – launching this Wednesday, [as part of iOS 8](https://deve
 
 The process of building the Tumblr share extension has been fun, but also really frustrating at times. We’ve hit quite a few problems that we ended up needing to work around, and in the interest of helping you do the same, would like to detail all of the issues that we encountered.
 
-Of course, your mileage may vary with some or all of these. We’ve talked to other developers who haven’t had the same problems, or have hit some that we haven’t. **To make it easy to track updates to these problems, we’ve created an issue in [this GitHub repo](https://github.com/tumblr/ios-extension-issues/) for each one.** Please create pull requests if you’ve got solutions or workarounds, or issues if you’ve encountered something that we didn’t.
+Of course, your mileage may vary with some or all of these. We’ve talked to other developers who haven’t had the same problems, or have hit some that we haven’t. **To make it easy to track updates to these problems, we’ve created an [issue](https://github.com/tumblr/ios-extension-issues/issues/) for each one.** Please create pull requests if you’ve got solutions or workarounds, or issues if you’ve encountered something that we didn’t.
 
 ## [We couldn’t get background file uploads to work](https://github.com/tumblr/ios-extension-issues/issues/1)
 
