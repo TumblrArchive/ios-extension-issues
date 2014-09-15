@@ -8,7 +8,7 @@ The process of building the Tumblr share extension has been fun, but also really
 
 Of course, your mileage may vary with some or all of these. We’ve talked to other developers who haven’t had the same problems, or have hit some that we haven’t. **To make it easy to track updates to these problems, we’ve created an issue in [this GitHub repo](https://github.com/tumblr/ios-extension-issues/) for each one.** Please create pull requests if you’ve got solutions or workarounds, or issues if you’ve encountered something that we didn’t.
 
-## We couldn’t get background file uploads to work
+## [We couldn’t get background file uploads to work](https://github.com/tumblr/ios-extension-issues/issues/1)
 
 * [Radar #18107172: Background NSURLSessionUploadTask cannot read file in app group shared container (on device)](http://openradar.appspot.com/radar?id=6188366450130944) ([sample project](https://github.com/tumblr/ios-extension-issues/tree/master/samples/BackgroundSessionErrors))
 
@@ -22,7 +22,7 @@ In our experience, while our extension and container application can both access
 
 As soon as a user taps the “Post” button, we’d ideally like to dismiss the extension and let them get on with their day, while continuing to upload in the background. Given that we haven’t been able to get this to work, we’ve given our extension a progress bar and are keeping it on screen until the request completes. It’s possible that the user could background the host application, and iOS could kill it in order to reclaim the memory, but this seems like our best option given these limitations. We’ll happily go back to using background sessions if the issue we’re seeing ends up getting fixed.
 
-## The container application must be opened before the share extension can be used
+## [The container application must be opened before the share extension can be used](https://github.com/tumblr/ios-extension-issues/issues/2)
 
 * [Radar #18119318: Need a way to migrate data into a shared container without requiring the user to explicitly launching the containing app before using the extension](http://openradar.appspot.com/radar?id=6377617741578240)
 
@@ -34,7 +34,7 @@ For existing apps, the problem is simple; the data already exists somewhere outs
 
 There’s no great option here. If the user opens our extension first, we just throw up a dialog telling them that they need to launch the application first. Inelegant but necessary.
 
-## We couldn’t get `NSFileCoordinator` to work
+## [We couldn’t get `NSFileCoordinator` to work](https://github.com/tumblr/ios-extension-issues/issues/3)
 
 * [Radar #18341292: `NSFileCoordinator` does not work reliably across applications and share extensions](http://openradar.appspot.com/radar?id=4926212463919104)
 
@@ -52,7 +52,7 @@ Rather than trying to keep access to a single file synchronized across processes
 
 This isn’t to say that `NSFileCoordinator` isn’t currently a viable option if you’ve got a different usage than we do. The [New York Times app](https://itunes.apple.com/us/app/nytimes-breaking-national/id284862083?mt=8), for example, is successfully using `NSFileCoordinator` in a simpler setup, where the container app is write-only and the extension is read-only.
 
-## We couldn’t set the status bar style/color
+## [We couldn’t set the status bar style/color](https://github.com/tumblr/ios-extension-issues/issues/4)
 
 * [Radar #17916449: Share extension status bars don’t respect `preferredStatusBarStyle`](http://openradar.appspot.com/radar?id=6397505050771456) ([sample project](https://github.com/tumblr/ios-extension-issues/tree/master/samples/StatusBarStyleIgnored))
 
@@ -64,7 +64,7 @@ We tried *everything*, but couldn’t find a way for our share extension (which 
 
 None so far. Neither Info.plist keys nor view controller methods worked, and we couldn’t even get a handle to the keyboard window the way that applications can usually accomplish using private API ([Sam Giddins](http://twitter.com/segiddins) nearly went insane trying. Thanks Sam!). Here’s hoping for a way to do this in iOS 8.1.
 
-## You can’t exclude your own share extension from your application’s activity controllers
+## [You can’t exclude your own share extension from your application’s activity controllers](https://github.com/tumblr/ios-extension-issues/issues/6)
 
 * [Radar #18065047: There’s no way to exclude your own app’s share extension from showing up within the app](http://openradar.appspot.com/radar?id=6456818549129216)
 
@@ -76,7 +76,7 @@ But the one extension that you *should* be able to remove from your own app’s 
 
 None so far. We tried configuring our activity controllers with an activity item with a custom UTI, and then specifically giving our share extension a predicate that would cause it to *not* show up when said UTI was present, but it had unintended side effects, which brings us to the next issue…
 
-## By default, share extensions will *only* show up if they explicitly support *all* of the provided activity items
+## [By default, share extensions will *only* show up if they explicitly support *all* of the provided activity items](https://github.com/tumblr/ios-extension-issues/issues/5)
 
 * [Radar #18342403: NSExtensionActivationRules should only need to match a single activity item for a share extension to be displayed](http://openradar.appspot.com/radar?id=5616559737274368)
 * [Radar #18150467: Documentation for custom NSExtensionItemActivation rules is very vague](http://openradar.appspot.com/radar?id=5803657102622720)
@@ -123,7 +123,7 @@ SUBQUERY(extensionItems, $extensionItem, SUBQUERY($extensionItem.attachments, $a
 
 ## Misc.
 
-* [Radar #18207630: Table view content insets get adjusted wildly when rotating a share extension](http://openradar.appspot.com/radar?id=6662315554373632) ([sample project](https://github.com/tumblr/ios-extension-issues/tree/master/samples/IncorrectTableViewContentInsets)). Minor, especially relative to the rest of these issues, but we’re already over 2,000 words here. What’s a few more?
+* [Table view content insets get adjusted wildly when rotating a share extension](https://github.com/tumblr/ios-extension-issues/issues/7) ([Radar #18207630](http://openradar.appspot.com/radar?id=6662315554373632), [sample project](https://github.com/tumblr/ios-extension-issues/tree/master/samples/IncorrectTableViewContentInsets)). Minor, especially relative to the rest of these issues, but we’re already over 2,000 words here. What’s a few more?
 
 ## Thanks!
 
