@@ -1,5 +1,3 @@
-# What we learned building the Tumblr iOS share extension
-
 ![Tumblr share extension icon featured in a banner at Apple’s WWDC 2014 event](wwdc.png)
 
 iOS app extensions – launching this Wednesday, [as part of iOS 8](https://developer.apple.com/ios8/#capabilities) – provide an exciting opportunity for developers of all types of apps to integrate with their customers’ devices like never before. Here at [Tumblr](https://itunes.apple.com/us/app/tumblr/id305343404?mt=8), we’re thrilled to pull the curtain off of our share extension, which we’ve been working hard on for quite a while now.
