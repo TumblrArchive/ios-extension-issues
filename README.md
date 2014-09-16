@@ -1,4 +1,4 @@
-# Everything that went wrong while building the Tumblr iOS share extension
+# What we learned building the Tumblr iOS share extension
 
 ![Tumblr share extension icon featured in a banner at Apple’s WWDC 2014 event](wwdc.png)
 
