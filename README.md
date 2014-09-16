@@ -52,7 +52,7 @@ Rather than trying to keep access to a single file synchronized across processes
 
 This isn’t to say that `NSFileCoordinator` isn’t currently a viable option if you’ve got a different usage than we do. The [New York Times app](https://itunes.apple.com/us/app/nytimes-breaking-national/id284862083?mt=8), for example, is successfully using `NSFileCoordinator` in a simpler setup, where the container app is write-only and the extension is read-only.
 
-## [Share extensions can’t set the status bar style/color](https://github.com/tumblr/ios-extension-issues/issues/4)
+## [Share extensions can’t set the status bar color](https://github.com/tumblr/ios-extension-issues/issues/4)
 
 * [Radar #17916449: Share extension status bars don’t respect `preferredStatusBarStyle`](http://openradar.appspot.com/radar?id=6397505050771456) ([sample project](https://github.com/tumblr/ios-extension-issues/tree/master/samples/StatusBarStyleIgnored))
 
