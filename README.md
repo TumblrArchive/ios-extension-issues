@@ -8,6 +8,8 @@ The process of building the Tumblr share extension has been fun, but also really
 
 Of course, your mileage may vary with some or all of these. We’ve talked to other developers who haven’t had the same problems, or have hit some that we haven’t. **To make it easy to track updates to these problems, we’ve created an [issue](https://github.com/tumblr/ios-extension-issues/issues/) for each one.** Please create pull requests if you’ve got solutions or workarounds, or issues if you’ve encountered something that we didn’t.
 
+* [We couldn't get background file uploads to work](#we-couldnt-get-background-file-uploads-to-work)
+
 ## [We couldn’t get background file uploads to work](https://github.com/tumblr/ios-extension-issues/issues/1)
 
 * [Radar #18107172: Background NSURLSessionUploadTask cannot read file in app group shared container (on device)](http://openradar.appspot.com/radar?id=6188366450130944) ([sample project](https://github.com/tumblr/ios-extension-issues/tree/master/samples/BackgroundSessionErrors))
